@@ -10,3 +10,12 @@ class ContactAdmin(admin.ModelAdmin):
     search_fields = 'id', 'first_name', 'last_name', 'phone', 'email',
     list_per_page = 10
     list_max_show_all = 100
+
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = 'id', 'name',
+    list_filter = 'name',
+    ordering = 'id',
+    search_fields = 'id', 'name',
+    list_per_page = 10
+    list_max_show_all = 100
