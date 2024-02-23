@@ -1,6 +1,6 @@
 <header class="header">
   <h1 class="header-heading">
-    <a href="{% url 'contact:index' %}" class="header-link">Agenda</a>
+    <a href="{% url 'contact:index' %}" class="header-link">Contact Book</a>
   </h1>
 </header>
 
@@ -30,6 +30,7 @@
       placeholder="Search" 
       id="search" 
       name="q"
+      value="{{ request.GET.q.strip }}"
     >
   </form>
 </div>
