@@ -60,7 +60,8 @@ def update(request, contact_id):
 
         if form.is_valid():
             contact = form.save()
-            return redirect('contact:update', contact_id=contact.pk)
+            messages.success(request, 'Contact has edited')
+            return redirect('contact:index')
 
         return render(
             request,
