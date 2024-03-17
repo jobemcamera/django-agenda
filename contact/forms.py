@@ -78,7 +78,7 @@ class RegisterUpdateForm(forms.ModelForm):
         strip=False,
         widget=forms.PasswordInput(attrs={"autocomplete": "new-password"}),
         help_text=password_validation.password_validators_help_text_html(),
-        required=False,
+        required=True,
     )
 
     password2 = forms.CharField(
@@ -86,7 +86,7 @@ class RegisterUpdateForm(forms.ModelForm):
         strip=False,
         widget=forms.PasswordInput(attrs={"autocomplete": "new-password"}),
         help_text='Use the same password as before.',
-        required=False,
+        required=True,
     )
 
     class Meta:
